@@ -1,0 +1,110 @@
+openapi: 3.0.3
+info:
+  title: BookKeeper.AI API
+  version: "0.1.0"
+  description: API for BookKeeper.AI - statement ingestion, transactions, VAT summaries.
+servers:
+  - url: http://localhost:8000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Tenant:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        vat_number:
+          type: string
+    StatementUploadResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+paths:
+  /v1/auth/register:
+    post:
+      summary: Register tenant admin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Tenant'
+  /v1/statements/upload:
+    post:
+      summary: Upload bank statement
+      security:
+        - bearerAuth: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatementUploadResponse'
+  /v1/statements/{id}/parse:
+    post:
+      summary: Trigger parse job
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Parsing started
+  /v1/transactions:
+    get:
+      summary: List transactions
+      parameters:
+        - name: period
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+  /v1/vat/periods/{period}/summary:
+    get:
+      summary: VAT201 summary
+      parameters:
+        - name: period
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: VAT summary JSON
