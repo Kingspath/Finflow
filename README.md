@@ -1,8 +1,10 @@
 # Finflow
 FinFlow: AI-Powered Accounting. Made for South Africa.
 
-Effortless Financial Management for Your South African Business
+Effortless Financial Management for Your South African Business.
+
 FinFlow was built to empower the entrepreneurs, freelancers, and small business owners of South Africa. We understand the unique challenges you face, from chasing invoices to preparing for SARS. That's why we created a smart, simple, and powerful AI-powered platform to put your financial admin on autopilot.
+
 Key Features:
  * Automated Bookkeeping: Securely upload your bank statements and let our AI do the heavy lifting. FinFlow intelligently categorizes your income and expenses, reconciles transactions, and ensures your books are always accurate and up-to-date. Say goodbye to manual data entry.
  * Smart Invoicing: Create and send professional invoices in just a few clicks. Our system tracks when invoices are viewed and paid, and automatically sends polite reminders for late payments, helping you get paid faster and maintain a healthy cash flow.
