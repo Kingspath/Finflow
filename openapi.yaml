@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
-  title: BookKeeper.AI API
+  title: FinFlow API
   version: "0.1.0"
-  description: API for BookKeeper.AI - statement ingestion, transactions, VAT summaries.
+  description: API for FinFlow - statement ingestion, transactions, VAT summaries.
 servers:
   - url: http://localhost:8000
 components:
