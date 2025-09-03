@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@sentry/nextjs": "^10.8.0",
     "@supabase/supabase-js": "^2.57.0"
   }
 }
