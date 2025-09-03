@@ -2,12 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Theme */
 @layer base {
   body {
     @apply bg-finflow-light text-finflow-dark font-sans;
   }
-
   h1, h2, h3, h4 {
-    @apply font-semibold text-finflow-dark;
+    @apply font-bold text-finflow-dark;
+  }
+  a {
+    @apply text-finflow-primary hover:text-finflow-primary-dark transition;
+  }
+}
+
+/* Reusable Components */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-finflow font-medium transition duration-200 inline-flex items-center justify-center;
+  }
+  .btn-primary {
+    @apply btn bg-finflow-primary text-white hover:bg-finflow-primary-dark shadow-finflow-card;
+  }
+  .btn-secondary {
+    @apply btn bg-finflow-secondary text-white hover:bg-emerald-600;
+  }
+  .btn-outline {
+    @apply btn border border-finflow-primary text-finflow-primary hover:bg-finflow-primary hover:text-white;
+  }
+  .card {
+    @apply bg-white shadow-finflow-card rounded-finflow p-4;
+  }
+  .card-hover {
+    @apply card hover:shadow-finflow-hover;
   }
 }

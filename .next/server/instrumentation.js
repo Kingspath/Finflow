@@ -418,7 +418,7 @@ module.exports = require("worker_threads");
 var __webpack_require__ = require("./webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/@opentelemetry","vendor-chunks/next","vendor-chunks/@swc","vendor-chunks/@sentry","vendor-chunks/@prisma","vendor-chunks/minimatch","vendor-chunks/resolve","vendor-chunks/color-convert","vendor-chunks/chalk","vendor-chunks/is-core-module","vendor-chunks/forwarded-parse","vendor-chunks/brace-expansion","vendor-chunks/color-name","vendor-chunks/ansi-styles","vendor-chunks/stacktrace-parser","vendor-chunks/shimmer","vendor-chunks/supports-color","vendor-chunks/function-bind","vendor-chunks/path-parse","vendor-chunks/balanced-match","vendor-chunks/has-flag","vendor-chunks/hasown"], () => (__webpack_exec__("(instrument)/./instrumentation.js")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/@opentelemetry","vendor-chunks/@sentry","vendor-chunks/next","vendor-chunks/@prisma","vendor-chunks/minimatch","vendor-chunks/resolve","vendor-chunks/color-convert","vendor-chunks/chalk","vendor-chunks/is-core-module","vendor-chunks/forwarded-parse","vendor-chunks/brace-expansion","vendor-chunks/color-name","vendor-chunks/ansi-styles","vendor-chunks/stacktrace-parser","vendor-chunks/shimmer","vendor-chunks/supports-color","vendor-chunks/function-bind","vendor-chunks/path-parse","vendor-chunks/balanced-match","vendor-chunks/@swc","vendor-chunks/has-flag","vendor-chunks/hasown"], () => (__webpack_exec__("(instrument)/./instrumentation.js")));
 module.exports = __webpack_exports__;
 
 })();
